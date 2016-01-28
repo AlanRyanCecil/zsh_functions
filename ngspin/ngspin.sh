@@ -6,7 +6,7 @@ ngspin(){
     mkdir $appName && cd $appName
 
     mkdir server
-    echo "Choose a port number for $appName."
+    echo "Choose a port for $appName."
     read port
     
     sed -e "s/\${port}/$port/"\
@@ -17,9 +17,17 @@ ngspin(){
     sed "s/\${appName}/$appName/"\
         ~/.zsh_functions/ngspin/templates/_index.html >> ~/$appName/app/index.html
 
-    mkdir mainApp controllers routes views services directives css
+    mkdir \
+        mainApp \
+        controllers \
+        routes \
+        views \
+        services \
+        directives \
+        css
 
-    touch mainApp/mainApp.js \
+    touch \
+        mainApp/mainApp.js \
         controllers/controllers.js \
         routes/routes.js \
         views/home.html \
