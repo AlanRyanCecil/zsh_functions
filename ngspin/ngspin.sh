@@ -36,7 +36,7 @@ ngspin(){
         css/main.css
 
     cd ..
-    sublime ../$appName
+
     typeset -u cappName
     cappName=$appName
     message="A new Angular app - $cappName -  has been created "
