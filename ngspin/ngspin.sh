@@ -11,11 +11,11 @@ ngspin(){
     
     sed -e "s/\${port}/$port/"\
         -e "s/\${appName}/$appName/"\
-        ~/.zsh_functions/ngspin/templates/_server.js >> ~/$appName/server/server.js
+        ~/.zsh_functions/ngspin/templates/_server.js > ~/$appName/server/server.js
 
     mkdir app && cd app
     sed "s/\${appName}/$appName/"\
-        ~/.zsh_functions/ngspin/templates/_index.html >> ~/$appName/app/index.html
+        ~/.zsh_functions/ngspin/templates/_index.html > ~/$appName/app/index.html
 
     mkdir \
         mainApp \
