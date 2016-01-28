@@ -18,13 +18,15 @@ ngspin(){
         ~/.zsh_functions/ngspin/templates/_index.html >> ~/$appName/app/index.html
 
     mkdir mainApp controllers routes views services directives css
-    touch mainApp/mainApp.js
-    touch controllers/controllers.js
-    touch routes/routes.js
-    touch views/home.html
-    touch services/services.js
-    touch directives/directives.js
-    touch css/main.css
+
+    touch mainApp/mainApp.js \
+        controllers/controllers.js \
+        routes/routes.js \
+        views/home.html \
+        services/services.js \
+        directives/directives.js \
+        css/main.css
+
     cd ..
     sublime ../$appName
     typeset -u cappName
